@@ -4,7 +4,7 @@
 # https://docs.scrapy.org/en/latest/topics/items.html
 
 import scrapy
-
+from scrapy.loader.processors import MapCompose,Compose,Join
 
 class LearnscrapyItem(scrapy.Item):
     # define the fields for your item here like:
@@ -14,7 +14,7 @@ class LearnscrapyItem(scrapy.Item):
     move_type = scrapy.Field()  # 电影类型
     country = scrapy.Field()  # 国家
     time = scrapy.Field()  # 时长
-    director = scrapy.Field()  # 导演
-    actor = scrapy.Field()  # 演员
+    director = scrapy.Field(output_processor=Join())  # 导演
+    actor = scrapy.Field(input_processor=MapCompose(str.strip),output_processor = Join())  # 演员
 
 

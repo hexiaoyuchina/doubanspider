@@ -4,7 +4,7 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+from fake_useragent import FakeUserAgent
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
 
@@ -60,6 +60,8 @@ class LearnscrapyDownloaderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
+    def __init__(self):
+        self.useragnet = FakeUserAgent()
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -78,7 +80,8 @@ class LearnscrapyDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
-        return None
+        request.headers["User_Agent"] = self.useragnet.random
+        return request
 
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
