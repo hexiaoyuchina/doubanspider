@@ -75,7 +75,7 @@
       <updated>1638342435478</updated>
       <workItem from="1638342440709" duration="13618000" />
       <workItem from="1638433893054" duration="11539000" />
-      <workItem from="1638515108847" duration="1273000" />
+      <workItem from="1638515108847" duration="1371000" />
     </task>
     <task id="LOCAL-00001" summary="动态更换useragent">
       <created>1638516519346</created>
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638516519346</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="每20次动态更换useragent">
+      <created>1638516634554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638516634554</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,7 +99,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="动态更换useragent" />
-    <option name="LAST_COMMIT_MESSAGE" value="动态更换useragent" />
+    <MESSAGE value="每20次动态更换useragent" />
+    <option name="LAST_COMMIT_MESSAGE" value="每20次动态更换useragent" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638344643898">
@@ -103,10 +111,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="57" key="#runspider/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1638344659481" />
-    <state x="489" y="51" key="CommitChangelistDialog2" timestamp="1638516517774">
+    <state x="489" y="51" key="CommitChangelistDialog2" timestamp="1638516721519">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="489" y="51" key="CommitChangelistDialog2/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1638516517774" />
+    <state x="489" y="51" key="CommitChangelistDialog2/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1638516721519" />
     <state width="1867" height="320" key="GridCell.Tab.0.bottom" timestamp="1638500025472">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

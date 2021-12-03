@@ -84,6 +84,7 @@ class LearnscrapyDownloaderMiddleware:
         #   installed downloader middleware will be called
         if self.num %20 == 0:
             request.headers["User_Agent"] = self.useragnet
+        request.meta["proxy"] = "XXXXXX"
         self.num += 1
         return request
 
