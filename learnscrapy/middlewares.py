@@ -61,7 +61,9 @@ class LearnscrapyDownloaderMiddleware:
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
     def __init__(self):
-        self.useragnet = FakeUserAgent()
+        self.ua = FakeUserAgent()
+        self.num = 0
+        self.useragent = self.ua.random
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -80,7 +82,9 @@ class LearnscrapyDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
-        request.headers["User_Agent"] = self.useragnet.random
+        if self.num %20 == 0:
+            request.headers["User_Agent"] = self.useragnet
+        self.num += 1
         return request
 
     def process_response(self, request, response, spider):
